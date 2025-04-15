@@ -84,7 +84,8 @@ function CreateList({ plist, setList }) {
   };
 
   const listItems = plist.map((post) => (
-    <li className="post">
+    <li className="post" key={post.id}>
+      
       <p>{post.title}</p>
       <p style={{ color: "#737373" }}>{post.body}</p>
       <button onClick={() => deletePost(post.id)}>Удалить</button>
